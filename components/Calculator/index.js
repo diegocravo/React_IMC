@@ -34,13 +34,13 @@ function Calculator (){
             <Typography variant="h3">Calculadora</Typography>
             <Grid container direction="column" spacing={2}>
                 <Grid item>
-                    <TextField label="Altura em cm" variant="filled" fullWidth type="number" value={altura} InputProps={{ inputProps: { min: 1, max: 250 } }} onChange={(e) => setAltura(e.target.value)} /> 
+                    <TextField id='input-1' label="Altura em cm" variant="filled" fullWidth type="number" value={altura} InputProps={{ inputProps: { min: 1, max: 250 } }} onChange={(e) => setAltura(e.target.value)} /> 
                 </Grid>
                 <Grid item>
-                    <TextField label="Peso em Kg" variant="filled" fullWidth type="number" value={peso} InputProps={{ inputProps: { min: 1, max: 1000 } }} onChange={(e) => setPeso(e.target.value)} /> 
+                    <TextField id='input-2' label="Peso em Kg" variant="filled" fullWidth type="number" value={peso} InputProps={{ inputProps: { min: 1, max: 1000 } }} onChange={(e) => setPeso(e.target.value)} /> 
                 </Grid>
                 <Grid item>
-                    <Button variant="contained" color="primary" fullWidth onClick={() => calculateImc()}>Calcular</Button>
+                    <Button id="btn" variant="contained" color="primary" fullWidth onClick={() => calculateImc()}>Calcular</Button>
                 </Grid>
                 {
                     imc && 
